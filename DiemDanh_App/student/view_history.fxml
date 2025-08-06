@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HistoryController">
+   <top>
+      <Pane prefHeight="41.0" prefWidth="425.0" style="-fx-background-color: #daebef;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="474.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lịch sử điểm danh">
+               <font>
+                  <Font name="Tahoma" size="18.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="clearButton" graphicTextGap="1.0" layoutY="7.0" onAction="#handleClearTable" prefHeight="27.0" prefWidth="89.0" text="Xoá tất cả">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/icons8-trash-32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TableView fx:id="historyTable" prefHeight="330.0" prefWidth="624.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="109.33334350585938" text="Họ tên" />
+          <TableColumn fx:id="mssvColumn" prefWidth="73.99996948242188" text="MSSV" />
+          <TableColumn fx:id="courseNameColumn" prefWidth="172.66668701171875" text="Tên học phần" />
+          <TableColumn fx:id="courseColumn" prefWidth="103.33331298828125" text="Mã học phần" />
+          <TableColumn fx:id="groupColumn" prefWidth="63.3333740234375" text="Nhóm" />
+          <TableColumn fx:id="timeColumn" prefWidth="108.0" text="Thời gian" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

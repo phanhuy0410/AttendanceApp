@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeacherController">
+   <top>
+      <Pane prefHeight="53.0" prefWidth="527.0" style="-fx-background-color: #daebef;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="logout" graphicTextGap="0.0" layoutX="14.0" layoutY="10.0" onAction="#Logout" prefHeight="33.0" prefWidth="63.0" text="Thoát">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/icons8-logout-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="509.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/icons8-profile-48.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="welcomeLabel" layoutX="460.0" layoutY="35.0" text="Xin chào," />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="259.0" prefWidth="559.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="courseTable" layoutX="64.0" layoutY="51.0" prefHeight="245.0" prefWidth="431.0">
+              <columns>
+                <TableColumn fx:id="groupColumn" prefWidth="71.33331298828125" text="Nhóm" />
+                  <TableColumn fx:id="courseIdColumn" prefWidth="80.66665649414062" text="Mã HP" />
+                  <TableColumn fx:id="courseNameColumn" prefWidth="164.6666259765625" text="Tên HP" />
+                  <TableColumn fx:id="viewButton" prefWidth="112.6666259765625">
+                     <graphic>
+                        <HBox prefHeight="0.0" prefWidth="122.0" />
+                     </graphic>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <TextField fx:id="searchField" layoutX="344.0" layoutY="15.0" prefHeight="25.0" prefWidth="160.0" />
+            <MenuButton fx:id="yearMenu" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-radius: 5;" text="Chọn">
+              <items>
+                <MenuItem fx:id="yearItem" mnemonicParsing="false" text="2024-2025" />
+              </items>
+            </MenuButton>
+            <Label layoutX="21.0" layoutY="18.0" text="Năm học:" />
+            <Label layoutX="204.0" layoutY="19.0" text="Học kì:" />
+            <MenuButton fx:id="semesterMenu" layoutX="247.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-radius: 5;" text="Chọn ">
+              <items>
+                <MenuItem fx:id="semesterItem" mnemonicParsing="false" text="1" />
+              </items>
+            </MenuButton>
+            <JFXButton fx:id="searchButton" graphicTextGap="0.0" layoutX="502.0" layoutY="14.0" onAction="#handleSearch" prefHeight="21.0" prefWidth="43.0" text="Tìm">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

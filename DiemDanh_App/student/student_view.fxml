@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentController">
+  <top>
+    <AnchorPane prefHeight="59.0" prefWidth="403.0" style="-fx-background-color: #daebef; -fx-background-radius: 7;" BorderPane.alignment="CENTER">
+      <children>
+        <Label fx:id="welcomeLabel" layoutX="353.0" layoutY="35.0" text="Xin chào, " />
+        <JFXButton fx:id="logout" layoutY="9.0" onAction="#Logout" prefHeight="35.0" prefWidth="77.0" style="-fx-cursor: hand;" text="Thoát">
+          <font>
+            <Font size="13.0" />
+          </font>
+        </JFXButton>
+        <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="6.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@/icons8-logout-96.png" />
+          </image>
+        </ImageView>
+        <Button fx:id="infoButton" layoutX="398.0" layoutY="-4.0" onAction="#handleInfoClick" style="-fx-background-color: transparent; -fx-cursor: hand;">
+          <graphic>
+            <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="411.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@/icons8-profile-48.png" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </children>
+    </AnchorPane>
+  </top>
+
+  <center>
+    <AnchorPane prefHeight="249.0" prefWidth="385.0" style="-fx-background-color: #eaeef4;" BorderPane.alignment="CENTER">
+      <children>
+        <Pane layoutY="6.0" prefHeight="332.0" prefWidth="141.0" style="-fx-background-color: #555454; -fx-background-radius: 7 7px 0 0;">
+          <children>
+            <Separator layoutX="5.0" layoutY="67.0" prefHeight="4.0" prefWidth="130.0" />
+            <JFXButton fx:id="historyButton" graphicTextGap="0.0" layoutX="-1.0" layoutY="71.0" onAction="#handleViewHistory" prefHeight="48.0" prefWidth="142.0" style="-fx-cursor: hand;" text="Xem Lịch Sử" textFill="WHITE">
+              <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@/icons8-list-100.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </JFXButton>
+            <Label fx:id="mssvLabel" layoutX="61.0" layoutY="14.0" text="Label" textFill="WHITE" />
+            <Circle fill="LIMEGREEN" layoutX="61.0" layoutY="42.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="70.0" layoutY="34.0" text="Online" textFill="WHITE">
+              <font>
+                <Font size="10.0" />
+              </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="42.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@/icons8-profile-48.png" />
+              </image>
+            </ImageView>
+          </children>
+        </Pane>
+        <Pane layoutX="150.0" layoutY="6.0" prefHeight="331.0" prefWidth="327.0" style="-fx-background-color: white; -fx-background-radius: 7px 7 0 0;">
+          <children>
+            <TextField fx:id="studentNameField" layoutX="90.0" layoutY="61.0" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-width: 0 0 1 0;" />
+            <Text fill="#1394cc" layoutX="109.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin điểm danh">
+              <font>
+                <Font name="Tahoma Bold" size="14.0" />
+              </font>
+            </Text>
+            <TextField fx:id="studentIdField" layoutX="90.0" layoutY="109.0" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-width: 0 0 1 0;" />
+            <Label layoutX="41.0" layoutY="67.0" text="Họ tên:">
+              <font>
+                <Font name="Tahoma" size="12.0" />
+              </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="115.0" text="MSSV:">
+              <font>
+                <Font name="Tahoma" size="12.0" />
+              </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="218.0" text="Mã HP:">
+              <font>
+                <Font name="Tahoma" size="12.0" />
+              </font>
+            </Label>
+            <Button fx:id="checkinButton" layoutX="144.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleCheckIn" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #1394cc; -fx-cursor: hand;" text="Điểm Danh" textFill="WHITE">
+              <font>
+                <Font name="Tahoma" size="12.0" />
+              </font>
+            </Button>
+                  <MenuButton fx:id="courseIdButton" layoutX="90.0" layoutY="212.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-width: 0 0 1 0;" text="Chọn">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="CT221" />
+                      <MenuItem mnemonicParsing="false" text="CT233" />
+                    </items>
+                  </MenuButton>
+                  <Label layoutX="39.0" layoutY="166.0" text="Tên HP:">
+                     <font>
+                        <Font name="Tahoma" size="12.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="courseNameButton" layoutX="90.0" layoutY="160.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="198.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Chọn">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Lập trình mạng" />
+                        <MenuItem mnemonicParsing="false" text="Điện toán đám mây" />
+                     </items>
+                  </MenuButton>
+                  <Label layoutX="182.0" layoutY="218.0" text="Nhóm:">
+                     <font>
+                        <Font name="Tahoma" size="12.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="groupButton" layoutX="228.0" layoutY="212.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-border-color: gray; -fx-border-width: 0 0 1 0;" text="Chọn">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="1" />
+                     </items>
+                  </MenuButton>
+          </children>
+        </Pane>
+      </children>
+    </AnchorPane>
+  </center>
+</BorderPane>

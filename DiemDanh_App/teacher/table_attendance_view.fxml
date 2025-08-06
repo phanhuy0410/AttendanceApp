@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AttendanceTableController">
+   <center>
+      <Pane prefHeight="267.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="attendanceTable" layoutY="-1.0" prefHeight="318.0" prefWidth="354.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="107.3332849740982" text="Họ tên" />
+                <TableColumn fx:id="mssvColumn" prefWidth="105.33330535888672" text="Mã số sinh viên" />
+                <TableColumn fx:id="timeColumn" prefWidth="138.00001525878906" text="Thời gian điểm danh" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Pane prefHeight="53.0" prefWidth="489.0" style="-fx-background-color: #daebef;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="93.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BẢNG ĐIỂM DANH">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
