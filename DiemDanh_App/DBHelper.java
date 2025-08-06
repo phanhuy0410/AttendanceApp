@@ -2,16 +2,17 @@ import java.sql.*;
 import java.util.*;
 
 public class DBHelper {
-// private static final String URL = "jdbc:mysql://13.214.218.173:3306/attendance_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-// private static final String USER = "root";
-// private static final String PASS = "pthsql@04";
-
-private static final String URL = "jdbc:mysql://localhost:3306/attendance_db";
+    private static final String URL = "jdbc:mysql://13.214.218.173:3306/attendance_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "";
-public static Connection connect() throws SQLException {
-    return DriverManager.getConnection(URL, USER, PASS);
-}
+    private static final String PASS = "pthsql@04";
+
+    // private static final String URL = "jdbc:mysql://localhost:3306/attendance_db";
+    // private static final String USER = "root";
+    // private static final String PASS = "";
+    
+    public static Connection connect() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASS);
+    }
 
     public static void saveAttendance(String full_name, String mssv, String tenHP, String maHP, int nhom) throws SQLException {
         String query = "INSERT INTO attendance (full_name, mssv, tenHP, maHP, nhom, ngaygio) VALUES (?, ?, ?, ?, ?, ?)";
@@ -127,6 +128,7 @@ public static Connection connect() throws SQLException {
     }
     return list;
 }
+
 
 
 }
