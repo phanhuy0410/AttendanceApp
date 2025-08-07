@@ -84,12 +84,12 @@ public class StudentController implements Initializable{
             String tenHP = courseNameButton.getText();
             String maHP = courseIdButton.getText();
             String nhomHP = groupButton.getText();
-            int nhom = Integer.parseInt(nhomHP);
             if (full_name.isEmpty() || mssv.isEmpty() || maHP.equals("Chọn") || tenHP.equals("Chọn") || nhomHP.equals("Chọn")) {
                 showAlert(Alert.AlertType.WARNING, "Thiếu thông tin",
                         "Vui lòng nhập đầy đủ!");
                 return;
             }
+            int nhom = Integer.parseInt(nhomHP);
             if (DBHelper.hasAlreadyCheckedIn(mssv, maHP)) {
                 showAlert(Alert.AlertType.INFORMATION, "Thông báo",
                         "Hôm nay bạn đã điểm danh cho học phần này rồi!");
@@ -170,3 +170,4 @@ public class StudentController implements Initializable{
     }
 
 }
+
